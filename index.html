@@ -1,19 +1,17 @@
+<!DOCTYPE html>
 <html>
 <head>
- <script async src="es-module-shims.js"></script>
- <script type="importmap">
-  {
-   "imports": {
-    "three": "./node_modules/three/build/three.module.js",
-    "three/addons/": "./node_modules/three/examples/jsm/"
-   }
-  }
- </script>
  <script src="jquery-3.6.3.min.js"></script>
- <script type="module" src="room.js"></script>
+ <script src="room.js"></script>
 <link type="text/css" rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div id="room-view"></div>
+ <div id="room-view">
+  <div id="room">
+   <div id="wall-west" class="wall wall-floor">Test</div>
+   <div id="wall-east" class="wall wall-floor">Test</div>
+   <div id="floor" class="floor wall-floor">Test</div>
+  </div>
+ </div>
 </body>
 </html>
