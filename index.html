@@ -2,16 +2,16 @@
 <html>
 <head>
  <script src="jquery-3.6.3.min.js"></script>
+ <script src="cssjl.js"></script>
+ <script src="roomjl.js"></script>
  <script src="room.js"></script>
 <link type="text/css" rel="stylesheet" href="style.css" />
 </head>
 <body>
  <div id="room-view">
-  <div id="room">
-   <div id="wall-west" class="wall wall-floor">Test</div>
-   <div id="wall-east" class="wall wall-floor">Test</div>
-   <div id="floor" class="floor wall-floor">Test</div>
-  </div>
+  <div id="room"></div>
  </div>
+ <a id="rotate-right" href="#" onClick="return $('#room').rotateRoomY( 20 );">&gt;</a>
+ <a id="rotate-left" href="#" onClick="return $('#room').rotateRoomY( -20 );">&lt;</a>
 </body>
 </html>

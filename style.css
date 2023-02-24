@@ -8,8 +8,18 @@ body {
 #room-view {
    position: relative;
    display: block;
-   margin: 300px auto;
+   margin: 150px auto;
    width: 300px;
+}
+
+#rotate-left {
+   position: absolute;
+   left: 150px;
+}
+
+#rotate-right {
+   position: absolute;
+   right: 150px;
 }
 
 /* === Room === */
@@ -17,37 +27,24 @@ body {
 #room {
    color: black;
    transform-style: preserve-3d;
-   transform: rotate3d( -1, 0, 0, 25deg ) rotate3d( 0, 1, 0, 45deg );
+   transition: transform 3s;
+   opacity: 0;
 }
 
-.wall-floor {
+.cssjl-quad {
    position: absolute;
    display: inline-block;
    margin: 0;
-   backface-visibility: inherit;
+   backface-visibility: hidden;
    /* perspective: 600px; */
 }
 
-.wall {
-   width: 400px;
-   height: 300px;
+.carpet {
+   border-radius: 20px;
 }
 
-#wall-west {
-   background: white;
-   transform: translateZ( -200px );
-}
-
-#wall-east {
-   background-color: gray;
-   transform: rotateY( -90deg ) translateZ( -200px );
-}
-
-#floor {
-   background: blue;
-   width: 400px;
-   height: 400px;
-   transform: rotateX( 90deg ) translateZ( -100px );
+.pane {
+   background: url( textures/clouds1_west.jpg ) !important;
 }
 
 /* === Furniture === */
