@@ -18,33 +18,36 @@ function objTable( tx, ty, tz ) {
 }
 
 function objWindow( tx, ty, tz ) {
+   const ch = 'sienna';
+   const cl = 'saddlebrown';
+
    return $('#room').objBase( tx, ty, tz )
-      /*          w,  h,    color,     tx,   ty,   tz,  rx,  ry,  rz, cls */
+      /*          w,  h,clr,   tx,    ty,    tz,  rx,  ry,  rz, cls */
       
       /* Top */
-      .jlQuadi( 100, 10, 'sienna',      0, -195,    5,  90,   0,   0, 'sill' )
-      .jlQuadi( 100, 10, 'saddlebrown', 0,    0, -190,   0,   0,   0, 'sill' )
-      .jlQuadi(  80, 10, 'sienna',     10,  195,    5, -90,   0,   0, 'sill' )
+      .jlQuadi( 100, 10, ch,    0,  -195,     5,  90,   0,   0, 'sill' )
+      .jlQuadi( 100, 10, cl,    0,     0,  -190,   0,   0,   0, 'sill' )
+      .jlQuadi(  80, 10, ch,   10,   195,     5, -90,   0,   0, 'sill' )
 
       /* Bottom */
-      .jlQuadi(  80, 10, 'sienna',     10, -195, -130,  90,   0,   0, 'sill' )
-      .jlQuadi( 100, 10, 'saddlebrown', 0,  135, -190,   0,   0,   0, 'sill' )
-      .jlQuadi( 100, 10, 'sienna',      0,  195,  140, -90,   0,   0, 'sill' )
+      .jlQuadi(  80, 10, ch,   10,  -195,  -130,  90,   0,   0, 'sill' )
+      .jlQuadi( 100, 10, cl,    0,   135,  -190,   0,   0,   0, 'sill' )
+      .jlQuadi( 100, 10, ch,    0,   195,   140, -90,   0,   0, 'sill' )
 
       /* Middle */
-      .jlQuadi(  80, 10, 'sienna',     10, -195, -60,  90,   0,   0, 'sill' )
-      .jlQuadi( 100, 10, 'saddlebrown', 0,  65, -190,   0,   0,   0, 'sill' )
-      .jlQuadi( 100, 10, 'sienna',      0,  195,  70, -90,   0,   0, 'sill' )
+      .jlQuadi(  80, 10, ch,   10,  -195,   -60,  90,   0,   0, 'sill' )
+      .jlQuadi( 100, 10, cl,    0,    65,  -190,   0,   0,   0, 'sill' )
+      .jlQuadi( 100, 10, ch,    0,   195,    70, -90,   0,   0, 'sill' )
 
       /* Right */
-      .jlQuadi( 125, 10, 'sienna',   67.5,  195, -27.5,   0, -90,  90, 'sill' )
-      .jlQuadi( 130, 10, 'saddlebrown',65, -30,   -190,   0,   0,  90, 'sill' )
-      .jlQuadi( 145, 10, 'sienna',   67.5, -195,  27.5,   0,  90,  90, 'sill' )
+      .jlQuadi( 125, 10, ch, 67.5,   195, -27.5,   0, -90,  90, 'sill' )
+      .jlQuadi( 125, 10, cl, 67.5, -32.5,  -190,   0,   0,  90, 'sill' )
+      .jlQuadi( 145, 10, ch, 67.5,  -195,  27.5,   0,  90,  90, 'sill' )
 
       /* Left */
-      .jlQuadi( 145, 10, 'sienna',  67.5,  195,  72.5,   0,  -90,  90, 'sill' )
-      .jlQuadi( 130, 10, 'saddlebrown',65,  60, -190,   0,    0,  90, 'sill' )
-      .jlQuadi( 125, 10, 'sienna',   67.5, -195,-52.5,    0,   90,  90, 'sill' )
+      .jlQuadi( 145, 10, ch, 67.5,   195,  72.5,   0, -90,  90, 'sill' )
+      .jlQuadi( 125, 10, cl, 67.5,  57.5,  -190,   0,   0,  90, 'sill' )
+      .jlQuadi( 125, 10, ch, 67.5,  -195, -52.5,   0,  90,  90, 'sill' )
 
       .jlQuadi(  80,  130,   'cyan', 10, 10, -200,   0,   0,   0, 'pane' );
 }

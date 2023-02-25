@@ -2,7 +2,7 @@
 (function ( $ ) {
 
    $.fn.objBase = function( tx, ty, tz ) {
-      var objOut = $('<div style="transform-style: preserve-3d"></div>');
+      var objOut = $('<div class="roomjl-obj"></div>');
       var trans_str = '';
 
       if( 0 != tx && undefined != tx ) {

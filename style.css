@@ -31,11 +31,14 @@ body {
    opacity: 0;
 }
 
+.roomjl-obj {
+   transform-style: inherit;
+}
+
 .cssjl-quad {
    position: absolute;
-   display: inline-block;
-   margin: 0;
    backface-visibility: hidden;
+   outline: 1px solid gray;
    /* perspective: 600px; */
 }
 
