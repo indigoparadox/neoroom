@@ -56,10 +56,36 @@ function objCarpet( tx, ty, tz ) {
       .jlQuadi( 160, 160, 'darkred',       120, 0, -220, 90, 0, 0, 'carpet' );
 }
 
+function objDesk( tx, ty, tz ) {
+   var cd = 'saddlebrown';
+   var cl = 'sienna';
+   var ch = 'red';
+
+   return $('#room').objBase( tx, ty, tz )
+      /*         w,    h, clr,  tx,   ty,   tz,  rx,  ry,  rz, cls */
+
+      /* Desk Front */
+      .jlQuadi( 20,  260,  cl, -10,    0,    10,   90,  -90,   0, 'desk' )
+      .jlQuadi( 70,   10,  cl, -180,    125,    35,   90,  -90,   0, 'desk' )
+      .jlQuadi( 70,   10,  cl, -180,    -125,    35,   90,  -90,   0, 'desk' )
+
+      /* Desk Right */
+      .jlQuadi( 100,  90,  cd,   0,  130,   130,   0,    0,   0, 'desk' )
+      .jlQuadi( 100,  70,  cd,   0,  150,  -120,   0, -180,   0, 'desk' )
+
+      /* Desk Left */
+      .jlQuadi( 100,  90,  cd,   0,  130,   130,   0, -180,   0, 'desk' )
+      .jlQuadi( 100,  70,  cd,   0,  150,  -120,   0,    0,   0, 'desk' )
+
+      /* Desk Top */
+      .jlQuadi( 100, 260,  cl,   0,    0,    0,   90,    0,   0, 'desk' );
+}
+
 $(document).ready( function() {
    var endTable = objTable( 60, 270, -170 );
    var window1 = objWindow( 100, 90, 0 );
    var carpet = objCarpet( 0, 0, 0 );
+   var desk = objDesk( 300, 80, -20 );
 
    $('#room')
       
@@ -74,6 +100,7 @@ $(document).ready( function() {
       .jlDivo( carpet )
       .jlDivo( window1 )
       .jlDivo( endTable )
+      .jlDivo( desk )
 
       /* Fade in room. */
       .animate( { 'opacity': 1 } )
