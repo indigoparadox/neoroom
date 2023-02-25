@@ -1,20 +1,23 @@
 
 function objTable( tx, ty, tz ) {
+   const ch = 'sienna';
+   const cl = 'saddlebrown';
+
    return $('#room').objBase( tx, ty, tz )
-      /* Tabletop                       tx   ty   tz  rx  ry*/
-      .jlQuadi( 30, 30, 'sienna',   0,   0,  14, 90 )
-      .jlQuadi( 30, 10, 'sienna',   0,   1, 15,  0, 90 )
-      .jlQuadi( 30, 10, 'sienna',   0,   1, 15,  0,-90 )
-      .jlQuadi( 30, 10, 'saddlebrown',        0,   1,  15 )
+      /* Tabletop            tx,  ty,  tz, rx,  ry, rz, cls*/
+      .jlQuadi( 30, 30, ch,   0,   0,  14, 90,   0,  0, 'table' )
+      .jlQuadi( 30, 10, ch,   0,   1,  15,  0,  90,  0, 'table' )
+      .jlQuadi( 30, 10, ch,   0,   1,  15,  0, -90,  0, 'table' )
+      .jlQuadi( 30, 10, cl,   0,   1,  15,  0,   0,  0, 'table' )
 
-      .jlQuadi( 10, 20, 'saddlebrown',        0,  10,  15,  0,  0 )
-      .jlQuadi( 10, 20, 'saddlebrown',       20,  10,  15,  0,  0 )
+      .jlQuadi( 10, 20, cl,   0,  10,  15,  0,   0,  0, 'table' )
+      .jlQuadi( 10, 20, cl,  20,  10,  15,  0,   0,  0, 'table' )
 
-      .jlQuadi( 10, 20, 'sienna',  10,  10, 25,  0, 90 )
-      .jlQuadi( 10, 20, 'sienna', -10,  10, 25,  0, 90 )
+      .jlQuadi( 10, 20, ch,  10,  10,  25,  0,  90,  0, 'table' )
+      .jlQuadi( 10, 20, ch, -10,  10,  25,  0,  90,  0, 'table' )
 
-      .jlQuadi( 10, 20, 'sienna',  10,  10,  5,  0, -90 )
-      .jlQuadi( 10, 20, 'sienna', -10,  10,  5,  0, -90 );
+      .jlQuadi( 10, 20, ch,  10,  10,   5,  0, -90,  0, 'table' )
+      .jlQuadi( 10, 20, ch, -10,  10,   5,  0, -90,  0, 'table' );
 }
 
 function objWindow( tx, ty, tz ) {
