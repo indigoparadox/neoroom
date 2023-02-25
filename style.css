@@ -42,8 +42,24 @@ body {
    /* perspective: 600px; */
 }
 
+.wall {
+   background: url( textures/drywall.png ) !important;
+}
+
+.floor {
+   background: url( textures/carpet-blue.jpg ) !important;
+}
+
 .carpet {
    border-radius: 20px;
+}
+
+.carpet-red {
+   background: url( textures/carpet-red.jpg ) !important;
+}
+
+.desk {
+   background: url( textures/wood.jpg ) !important;
 }
 
 .pane {

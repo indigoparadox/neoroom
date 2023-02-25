@@ -53,10 +53,13 @@ function objWindow( tx, ty, tz ) {
 }
 
 function objCarpet( tx, ty, tz ) {
+   const csr = 'carpet carpet-red';
+   const csg = 'carpet carpet-gold';
+
    return $('#room').objBase( tx, ty, tz )
-      .jlQuadi( 200, 200, 'darkred',       100, 0, -200, 90, 0, 0, 'carpet' )
-      .jlQuadi( 180, 180, 'darkgoldenrod', 110, 0, -210, 90, 0, 0, 'carpet' )
-      .jlQuadi( 160, 160, 'darkred',       120, 0, -220, 90, 0, 0, 'carpet' );
+      .jlQuadi( 200, 200, 'darkred',       100, 0, -200, 90, 0, 0, csr )
+      .jlQuadi( 180, 180, 'darkgoldenrod', 110, 0, -210, 90, 0, 0, csg )
+      .jlQuadi( 160, 160, 'darkred',       120, 0, -220, 90, 0, 0, csr );
 }
 
 function objDesk( tx, ty, tz ) {
@@ -85,6 +88,10 @@ function objDesk( tx, ty, tz ) {
 }
 
 $(document).ready( function() {
+   
+   const csww = 'wall wall-west';
+   const cswe = 'wall wall-east';
+
    var endTable = objTable( 60, 270, -170 );
    var window1 = objWindow( 100, 90, 0 );
    var carpet = objCarpet( 0, 0, 0 );
@@ -93,8 +100,8 @@ $(document).ready( function() {
    $('#room')
       
       /* Add walls. */
-      .jlQuadi( 400, 300,  'lightgray', 0, 0, -200,  0,   0, 0, 'wall-west' )
-      .jlQuadi( 400, 300, 'white', 0, 0, -200,  0, -90, 0, 'wall-east' )
+      .jlQuadi( 400, 300,  'lightgray', 0, 0, -200,  0,   0, 0, csww )
+      .jlQuadi( 400, 300, 'white', 0, 0, -200,  0, -90, 0, cswe )
 
       /* Add floor. */
       .jlQuadi( 400, 400,  'navy', 0, 0, -100, 90,   0, 0, 'floor' )
