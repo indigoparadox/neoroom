@@ -5,6 +5,13 @@ body {
    color: white;
 }
 
+#body-center {
+   position: relative;
+   display: table;
+   margin: 0 auto;
+   width: 800px;
+}
+
 h1 {
    font-family: Arial, Helvetica, sans-serif;
    text-align: center;
@@ -12,19 +19,30 @@ h1 {
 
 #room-view {
    position: relative;
-   display: block;
+   display: table;
    margin: 150px auto;
-   width: 300px;
+   width: 400px;
+}
+
+.rotate-container {
+   display: table;
+   margin: 10px auto;
+}
+
+#rotate-left, #rotate-right, #rotate-left:visited, #rotate-right:visited {
+   color: white;
+   font-size: 4em;
+   text-decoration: none;
+   position: absolute;
+   top: 300px;
 }
 
 #rotate-left {
-   position: absolute;
-   left: 150px;
+   right: 50px;
 }
 
 #rotate-right {
-   position: absolute;
-   right: 150px;
+   left: 50px;
 }
 
 /* === Room === */

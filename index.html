@@ -8,11 +8,17 @@
 <link type="text/css" rel="stylesheet" href="style.css" />
 </head>
 <body>
+<div id="body-center">
  <h1>Welcome to My WebRoom!</h1>
+ <a id="rotate-right" href="#" onClick="return $('#room').rotateRoomY( 20 );">
+  &#8630;
+ </a>
+ <a id="rotate-left" href="#" onClick="return $('#room').rotateRoomY( -20 );">
+  &#8631;
+ </a>
  <div id="room-view">
   <div id="room"></div>
  </div>
- <a id="rotate-right" href="#" onClick="return $('#room').rotateRoomY( 20 );">&gt;</a>
- <a id="rotate-left" href="#" onClick="return $('#room').rotateRoomY( -20 );">&lt;</a>
+</div>
 </body>
 </html>
