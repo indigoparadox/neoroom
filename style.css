@@ -65,6 +65,22 @@ h1 {
    /* perspective: 600px; */
 }
 
+.tv-left-t {
+   border-top: 0;
+   border-left: 40px solid transparent;
+   border-right: 40px solid dimgray;
+   border-bottom: 40px solid dimgray;
+   outline: none;
+}
+
+.tv-right-t {
+   border-top: 0;
+   border-right: 40px solid transparent;
+   border-left: 40px solid dimgray;
+   border-bottom: 40px solid dimgray;
+   outline: none;
+}
+
 .wall {
    background: url( textures/drywall.png ) !important;
 }

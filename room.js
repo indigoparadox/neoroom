@@ -90,6 +90,35 @@ function objDesk( tx, ty, tz ) {
       .jlQuadi( 100, 260,  cl,   0,    0,    0,   90,    0,   0, 'desk' );
 }
 
+function objTV( tx, ty, tz ) {
+   var cd = 'dimgray';
+   var cl = 'darkgray';
+   var ch = 'red';
+   var cs = 'cyan';
+
+   return $('#room').objBase( tx, ty, tz )
+      /*          w,   h, clr,  tx,   ty,   tz,  rx,   ry,  rz, cls */
+
+      /* Front */
+      .jlQuadi( 100,  80,  cl,   0,    0,    0,   0,  -90,   0, 'tv-bezel' )
+      .jlQuadi( 80,   60,  cs,   0,   10,  -10,   0,  -90,   0, 'tv-screen' )
+
+      /* Back */
+      .jlQuadi( 100,  39,  cl,   0,   41,   80,   0,   90,   0, 'tv-back' )
+
+      /* Left Side */
+      .jlQuadi( 80,   40,  cd,  20,  -30,   50,   0,    0,  90, 'tv-left-f' )
+      .jlQuadi( 0,     0,  '',  20,  -70,   50,   0,    0,  90, 'tv-left-t' )
+
+      /* Right Side */
+      .jlQuadi( 80,   40,  cd,  20,   30,   50,   0, -180,  90, 'tv-right-f' )
+      .jlQuadi( 0,     0,  '', -20,  -70,   50,   0, -180, -90, 'tv-right-t' )
+
+      /* Top */
+      .jlQuadi( 100,  56,  cl,   0,  -37,   48,  90,   45,  90, 'tv-top-t' )
+      .jlQuadi( 100,  40,  cl,   0,  -20,   20,  90,    0,  90, 'tv-top-f' );
+}
+
 $(document).ready( function() {
    
    const csww = 'wall wall-west';
@@ -99,6 +128,7 @@ $(document).ready( function() {
    var window1 = objWindow( 100, 90, 0 );
    var carpet = objCarpet( 0, 0, 0 );
    var desk = objDesk( 300, 80, -20 );
+   var tv = objTV( 260, 128, -60 );
 
    $('#room')
       
@@ -114,6 +144,7 @@ $(document).ready( function() {
       .jlDivo( window1 )
       .jlDivo( endTable )
       .jlDivo( desk )
+      .jlDivo( tv )
 
       /* Fade in room. */
       .animate( { 'opacity': 1 } )

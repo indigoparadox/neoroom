@@ -8,9 +8,7 @@
    };
 
    $.fn.jlQuadi = function( w, h, color, tx, ty, tz, rx, ry, rz, cls ) {
-      var quad =
-         $('<div class="cssjl-quad" style="width: ' + w + 'px; height: ' +
-         h + 'px; background: ' + color + '"></div>');
+      var quad = $('<div class="cssjl-quad"></div>');
 
       var trans_str = '';
       
@@ -36,6 +34,18 @@
 
       if( 0 != tz && undefined != tz ) {
          trans_str += 'translateZ( ' + tz + 'px ) ';
+      }
+
+      if( 0 != w && undefined != w ) {
+         quad.css( 'width', w + 'px' );
+      }
+
+      if( 0 != h && undefined != h ) {
+         quad.css( 'height', h + 'px' );
+      }
+
+      if( '' != color && undefined != color ) {
+         quad.css( 'background-color', color );
       }
 
       if( undefined != cls ) {
