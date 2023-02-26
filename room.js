@@ -150,6 +150,9 @@ $(document).ready( function() {
       .animate( { 'opacity': 1 } )
 
       /* Rotate the room to isometric-ish view. */
-      .rotateRoomY( 45 );
+      .rotateRoomY( 45 )
+      .each( function() {
+         $('.tv-screen').append( '<iframe width="80" height="60" src="https://www.youtube.com/embed/jfKfPfyJRdk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>' );
+      } );
 } );
 

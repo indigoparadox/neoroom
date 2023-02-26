@@ -29,8 +29,9 @@
       $('#room').css(
          'transform',
          'rotate3d( -1, 0, 0, 25deg ) rotate3d( 0, 1, 0, ' +
-            gRoomRotateY + 'deg )' );
-      return false;
+            gRoomRotateY + 'deg )' )
+      
+      return this;
    }
 
 }( jQuery ));

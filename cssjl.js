@@ -52,8 +52,6 @@
          quad.addClass( cls );
       }
 
-      console.log( trans_str );
-
       this.append( quad );
       /* quad.css( 'transition', 'transform 10s' ); */
       quad.css( 'transform', trans_str );
